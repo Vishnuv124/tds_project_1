@@ -366,6 +366,7 @@ def call_openai(prompt: str) -> str:
     Adjust or rename as needed.
     """
     token = os.environ.get("AIPROXY_TOKEN")
+    token = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDQ3ODBAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.Yf15M9vxDXiECOYbvIQlJg7eP7s887v9r9ydJMXCPXY"
     if not token:
         raise Exception("AIPROXY_TOKEN environment variable not set.")
 

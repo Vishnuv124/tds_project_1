@@ -365,7 +365,11 @@ def call_openai(prompt: str) -> str:
     Sends 'prompt' to GPT-4o-Mini (via AI Proxy) and returns the raw string response.
     Adjust or rename as needed.
     """
+    os.environ["AIPROXY_TOKEN"] = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDQ3ODBAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.Yf15M9vxDXiECOYbvIQlJg7eP7s887v9r9ydJMXCPXY"
     token = os.environ.get("AIPROXY_TOKEN")
+    
+    os.environ["AIPROXY_TOKEN"] = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDQ3ODBAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.Yf15M9vxDXiECOYbvIQlJg7eP7s887v9r9ydJMXCPXY"
+
     if not token:
         token = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDQ3ODBAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.Yf15M9vxDXiECOYbvIQlJg7eP7s887v9r9ydJMXCPXY"
         print("Warning: Using hardcoded AIPROXY_TOKEN. Set it in the environment for security.")
